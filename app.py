@@ -1,7 +1,8 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from googleMaps_Scrape import scrape_google_maps
-import json  # Add this line to import the json module
+import json  
+import os
 
 app = Flask(__name__)
 CORS(app)  # This will enable CORS for all routes
