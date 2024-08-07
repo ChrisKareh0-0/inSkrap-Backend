@@ -25,6 +25,10 @@ def scrape():
         error_message = str(e)
         return jsonify({'error': error_message}), 500
 
+@app.route('/status', methods=['GET'])
+def status():
+    return jsonify({"status": "Backend is running"}), 200
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(debug=True, host='0.0.0.0', port=port)
